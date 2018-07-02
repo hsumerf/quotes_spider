@@ -13,8 +13,8 @@ class QuotesSpider(scrapy.Spider):
         #All tags text where class="tag-item"
         tags = response.xpath('//*[@class="tag-item"]/a/text()').extract()
         #key-value
-        #yield {'H1 Tag':h1, 'Tags':tags}
-        print(h1,tags)
-        
+        yield {'H1 Tag': h1, 'Tags': tags}
+        #print(h1,tags)
+
 
 
